@@ -1,3 +1,6 @@
+# Secrets (SSID - PASS - TOKEN)
+secrets.h
+
 # Prerequisites
 *.d
 
