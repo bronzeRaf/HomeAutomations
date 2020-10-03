@@ -10,7 +10,7 @@ The duration of the ON relays is monitored and after 20min the ralays automatica
 The date and the duration of the last ON is stored as history.
 The project is paired with an Android app.
 
-29/9/2020 Raf Bronze rnm1816@gmail.com
+3/10/2020 Raf Bronze rnm1816@gmail.com
 
  *************************************************************/
 
@@ -18,14 +18,14 @@ The project is paired with an Android app.
 #include <ESP8266WiFi.h>
 #include <BlynkSimpleEsp8266.h>
 #include <Time.h>
-#include "secrets.h" // Sensitive data (ssid + password)
+#include "secrets.h" //sensitive data (ssid + password + token)
 
 // Token to authenticate Android app
 char auth[] = SECRET_TOKEN;
 // Blynk timer for callback
 BlynkTimer timer;
 
-// WiFi credentials.
+// WiFi credentials
 char ssid[] = SECRET_SSID;
 char pass[] = SECRET_PASS;
 
@@ -89,7 +89,7 @@ void myTimerEvent(){
 // Function called when button is triggered
 BLYNK_WRITE(V0){
   // Obtain button value
-  button = param.asInt();           //get value as integer
+  button = param.asInt();       //get value as integer
   if (button == 0){
     // Turn off
     Serial.println(button);
