@@ -18,7 +18,7 @@ Software is applied both in the NodeMCU and in the android smartphone.
 #### Android
 The Android side software is easy to develop through the [Blynk](https://docs.blynk.cc/) app. The final Android is presented in the the picture below. There are 2 screenshots, one with the Heater OFF and one with the Heater ON.
 
-![androidSide](#)
+![androidSide](https://github.com/bronzeRaf/HomeAutomations/blob/main/RealyProject/ReallyRelay/ReallyRelay/assets/android.png)
 
 #### Services
 The user is able to:
@@ -52,4 +52,4 @@ Digital Pins
 
 You can see the wiring schema below.
 
-![schema](#)
+![schema](https://github.com/bronzeRaf/HomeAutomations/blob/main/RealyProject/ReallyRelay/ReallyRelay/assets/schema.png)
