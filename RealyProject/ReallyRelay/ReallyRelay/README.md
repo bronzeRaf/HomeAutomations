@@ -5,12 +5,6 @@ This project uses the Blynk IoT platform.
 
 Turn on - off your devices with safety in first place.
 
-## Hardware
-
-You will need:
-- 1 NodeMCU board
-- 2 ralays
-- Some wires
 
 ## Software
 Software is applied both in the NodeMCU and in the android smartphone.
@@ -50,6 +44,14 @@ Digital Pins
 - D5 (GPIO14) ~ Relay 1 control
 - D6 (GPIO12) ~ Relay 1 control
 
+
+## Hardware
+
+You will need:
+- 1 NodeMCU board
+- 2 ralays
+- Some wires
+- An Android smartphone with Blynk installed to use the services
 You can see the wiring schema below.
 
 ![schema](https://github.com/bronzeRaf/HomeAutomations/blob/main/RealyProject/ReallyRelay/ReallyRelay/assets/schema.png)
