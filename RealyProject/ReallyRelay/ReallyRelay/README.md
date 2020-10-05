@@ -10,7 +10,7 @@ Turn on - off your devices with safety in first place.
 Software is applied both in the NodeMCU and in the android smartphone.
 
 #### Android
-The Android side software is easy to develop through the [Blynk](https://docs.blynk.cc/) app. The final Android is presented in the the picture below. There are 2 screenshots, one with the Heater OFF and one with the Heater ON.
+The Android side software is easy to develop through the [Blynk](https://docs.blynk.cc/) app. The final Android app is presented in the the picture below. There are 2 screenshots, one with the Heater OFF and one with the Heater ON.
 
 ![androidSide](https://github.com/bronzeRaf/HomeAutomations/blob/main/RealyProject/ReallyRelay/ReallyRelay/assets/android.png)
 
@@ -26,10 +26,12 @@ The project also provides automatically:
 - Reconnect attemps
 - Turn OFF the heater after 20mins
 - Turn OFF heater if the supply is cut
-- Initialize with heater OFF and sync with Android after reboot
+- Initialize with heater OFF and sync with Android after NodeMCU reboot
+- Android app can go offline
+- No static IP / DynDNS is required
 
 #### NodeMCU
-The full source code of this side could be found the file "ReallyRelay.ino". The source code is structured in functions and it is using the Blynk api to configure callbacks and a timer.
+The full source code of this side could be found the file "ReallyRelay.ino". The source code is structured in functions and it is using the Blynk API to configure the callbacks and a timer.
 
 The Pins that the app uses:
 Virtual Pins
@@ -49,9 +51,11 @@ Digital Pins
 
 You will need:
 - 1 NodeMCU board
-- 2 ralays
+- 2 relays (of any type, based on your needs)
 - Some wires
+- Wifi internet connection
 - An Android smartphone with Blynk installed to use the services
+
 You can see the wiring schema below.
 
 ![schema](https://github.com/bronzeRaf/HomeAutomations/blob/main/RealyProject/ReallyRelay/ReallyRelay/assets/schema.png)
