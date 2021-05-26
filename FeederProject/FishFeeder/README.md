@@ -38,6 +38,10 @@ Non Electronics:
 Electronics:
 Follow the circuit on the photo below. Keep in mind that the Capacitor could provide some voltage stability but it is not mandatory. You can power up your system with Batteries or USB adaptor. The power supply required depends on the board you are using. 
 
+![circuit1](https://github.com/bronzeRaf/HomeAutomations/blob/main/FeederProject/FishFeeder/assets/circuit.png)
+
+![circuit2](https://github.com/bronzeRaf/HomeAutomations/blob/main/FeederProject/FishFeeder/assets/5.jpg)
+
  Non Electronics:
 - Open a whole on the top of the first cap so that the servo can fit inside. Then screw or yield the servo for stability
 - Open a small whole on the bottom of the cap (depended on your fishes' food size) 
@@ -47,6 +51,13 @@ Follow the circuit on the photo below. Keep in mind that the Capacitor could pro
 - If you want, you can make another whole on the top of the cap to refill with food from there 
 You can see the below photos. 
 
+![feeder1](https://github.com/bronzeRaf/HomeAutomations/blob/main/FeederProject/FishFeeder/assets/1.jpg)
+
+![feeder2](https://github.com/bronzeRaf/HomeAutomations/blob/main/FeederProject/FishFeeder/assets/2.jpg)
+
+![feeder3](https://github.com/bronzeRaf/HomeAutomations/blob/main/FeederProject/FishFeeder/assets/3.jpg)
+
+![feeder4](https://github.com/bronzeRaf/HomeAutomations/blob/main/FeederProject/FishFeeder/assets/4.jpg)
 
 Enjoy your happy fish!! But don't forget to give them also some of your time!!
 

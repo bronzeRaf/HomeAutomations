@@ -31,6 +31,8 @@ The project also provides automatically:
 A project for controling fish aquarium devices over the Internet.
 This project uses an IoT platform and aArduino boards.
 
+![feeder1](https://github.com/bronzeRaf/HomeAutomations/blob/main/FeederProject/FishFeeder/assets/1.jpg)
+
 Go anywhere and anytime with your fish in first place.
 
 #### Services
