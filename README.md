@@ -29,7 +29,7 @@ The project also provides automatically:
 ## Fish Feeder
 
 A project for controling fish aquarium devices over the Internet.
-This project uses the Blynk IoT platform and an EPS8266 board.
+This project uses an IoT platform and aArduino boards.
 
 Go anywhere and anytime with your fish in first place.
 

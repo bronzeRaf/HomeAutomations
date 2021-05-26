@@ -1,12 +1,15 @@
 /* FishFeeder
-  by Bronze Raf
+  Author: Bronze Raf
   This code implements an automatic fish feeder.
 
+  Uncomment Debug Serial prints, in order to monitor the process
   May 2021
 */
 
 #include "Button.h"
 #include <Servo.h>
+
+//-------------------------ABSTRACT LEVEL-------------------------
 namespace Hardware {
 //typedef class Task Task;
 extern "C" {
@@ -68,7 +71,9 @@ class Task {
 
 };
 };
-//=====================================================================
+//----------------------------------------------------------------
+
+//--------------------------DEFINE TASKS--------------------------
 using Hardware::Task;
 //
 class LedTask: public Hardware::Task {
@@ -111,9 +116,9 @@ class ServoTask: public Hardware::Task {
     unsigned long forceTimeRestore = 0;
     
     public: 
-      int speed = 3; //how fast servo moves
-      int repeatCount = 1; //how many moves to laft-right
-      unsigned long repeatInterval = 0;// delay to next move series
+      int speed = 3;                      //how fast servo moves
+      int repeatCount = 1;                //how many moves to laft-right
+      unsigned long repeatInterval = 0;   // delay to next move series
     
     public: void setup() {
         servo.attach(9);
@@ -156,8 +161,6 @@ class ServoTask: public Hardware::Task {
     }
 };
 
-
-
 class SensorTask: public Hardware::Task {
     int pin = A0;
     public: int valueServoRepeatCount = 5;    
@@ -175,18 +178,17 @@ class SensorTask: public Hardware::Task {
       sleep(10);
     }
 }; 
+//----------------------------------------------------------------
 
-///////
+
+/* Global Variables*/
 ServoTask servo;
 SensorTask sensor;
 LedTask led;
-
 Hardware::Button button = Hardware::Button(8);
-//////
-
 unsigned long timer = 0;
 
-//////
+//--------------------------EVENT METHODS-------------------------
 void onSensorValueChanged(){
   //Serial.print("valueServoRepeatCount=");  
   //Serial.println(task->valueServoRepeatCount,DEC);  
@@ -197,26 +199,27 @@ void onSensorValueChanged(){
   servo.speed = sensor.valueServoFrequency;
 }
 
-void onPress(Hardware::Button& sender)
-{
+void onPress(Hardware::Button& sender){
   //Serial.println("onPress");
   servo.forceRun();
 }
+//----------------------------------------------------------------
 
 void setup() {
+  // Debug
   //Serial.begin(9600);
+  // Servo setup
   servo.setup();
-  servo.repeatInterval = 43200000; //60000*60*12 ms*Min*Hrs
+  servo.repeatInterval = 60000*60*8; // ms*Min*Hrs
   servo.setEnabled();
-  
+  // Led setup
   led.setup();
   led.setEnabled();  
-  
+  // Potentiometer setup
   sensor.setEnabled();
   sensor.onValueChanged = &onSensorValueChanged;
-  
+  // Button setup
   button.onPress = &onPress;
-   
 }
 
 void loop() {
