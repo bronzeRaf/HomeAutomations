@@ -12,8 +12,8 @@ Go anywhere and anytime with your fish in first place.
 
 The standard version of the project could:
 - Feed fish every 8 hours
-- Extra feed out the routine with a button (without reset to the timer)
-- Reset
+- Extra feed out of the routine with a button press (without reset to the timer)
+- Reset timer
 - Adjust the portion via potentiometer
  
 #### Hardware
@@ -43,12 +43,12 @@ Follow the circuit on the photo below. Keep in mind that the Capacitor could pro
 ![circuit2](https://github.com/bronzeRaf/HomeAutomations/blob/main/FeederProject/FishFeeder/assets/5.jpg)
 
  Non Electronics:
-- Open a whole on the top of the first cap so that the servo can fit inside. Then screw or yield the servo for stability
-- Open a small whole on the bottom of the cap (depended on your fishes' food size) 
-- Keep only the bottom of the second cap and open a similar whole like the first cap's.
+- Open a hole on the top of the first cap so that the servo can fit inside. Then screw or yield the servo for stability.
+- Open a small hole on the bottom of the cap (depended on your fishes' food size).
+- Keep only the bottom of the second cap and open a similar hole like the first cap's.
 - Yield the stick (or the straw) to the servo, and cut it to fit perfectly inside the cap. Then yield the other end of the stick to the bottom of the second cap.
 - Cover the first cap with the top, that contains the servo that is yielded with the stick and the second's cap bottom.
-- If you want, you can make another whole on the top of the cap to refill with food from there 
+- If you want, you can make another hole on the top of the cap to refill with food from there 
 You can see the below photos. 
 
 ![feeder1](https://github.com/bronzeRaf/HomeAutomations/blob/main/FeederProject/FishFeeder/assets/1.jpg)
@@ -61,7 +61,7 @@ You can see the below photos.
 
 Enjoy your happy fish!! But don't forget to give them also some of your time!!
 
-## Extended Project
+## Extended Project addons
 
 #### Services
 

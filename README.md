@@ -4,7 +4,7 @@ A set of home automation project, based on Arduino and ESP8266 boards and IoT pl
 ## Really Relay
 
 A project for controling water heaters, plugs and any kind of devices over the Internet.
-This project uses the Blynk IoT platform and an NodeMCU board.
+This project uses IoT platform and an Arduino or NodeMCU boards.
 
 Turn on - off your devices with safety in first place.
 
@@ -29,7 +29,7 @@ The project also provides automatically:
 ## Fish Feeder
 
 A project for controling fish aquarium devices over the Internet.
-This project uses an IoT platform and aArduino boards.
+This project uses IoT platform and Arduino or NodeMCU boards.
 
 ![feeder1](https://github.com/bronzeRaf/HomeAutomations/blob/main/FeederProject/FishFeeder/assets/1.jpg)
 
