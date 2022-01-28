@@ -41,18 +41,46 @@ void setup() {
   // Debug console
   Serial.begin(9600);
   Cayenne.begin(MQTT_USERNAME, MQTT_PASSWORD, MQTT_CLIENT_ID, ssid, pass);
+  // Define pins
   pinMode(led, OUTPUT);
+  pinMode(relay1, OUTPUT);
+  pinMode(relay2, OUTPUT);
+  // Initialize pins
   digitalWrite(led, HIGH);
+  digitalWrite(relay1, LOW);
+  digitalWrite(relay2, LOW);
   Cayenne.virtualWrite(V0, 0);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
   Cayenne.loop();
 }
 
-CAYENNE_IN(V0)
-{
-  int i = getValue.asInt();
-  digitalWrite(2, !i);
+CAYENNE_IN(V0){
+  heater = getValue.asInt();
+  Serial.println(heater);
+  digitalWrite(led, !heater);
+  digitalWrite(relay1, heater);
+  digitalWrite(relay2, heater);
+}
+
+// Function to turn OFF the heater
+void turnOFFheater(){
+  // Turn Off relays
+  digitalWrite(relay1,LOW);
+  digitalWrite(relay2,LOW);
+  heater = 0;
+  // Turn OFF button
+  Cayenne.virtualWrite(V0, 0);
+}
+
+// Function to turn OFF the heater
+void turnONheater(){
+  // Turn On relays
+  digitalWrite(relay1,HIGH);
+  digitalWrite(relay2,HIGH);
+  heater = 1;
+  // Get stop time
+  // Turn ON button
+  Cayenne.virtualWrite(V0, 1);
 }
