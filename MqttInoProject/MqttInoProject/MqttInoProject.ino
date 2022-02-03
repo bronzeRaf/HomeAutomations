@@ -1,5 +1,5 @@
 /*************************************************************
-This is an IoT project using the Blynk Platform.
+This is an IoT project using the Cayenne Platform.
 
 Hardware:
 -NodeMCU board
@@ -7,6 +7,7 @@ Hardware:
 
 Virtual pins:
 V0: led
+V1: ON live time 
 
 This project controls 2 relays through the internet to implement a home automation.
 The duration of the ON relays is monitored and after 20min the ralays automatically turn OFF
@@ -56,6 +57,8 @@ void loop() {
   Cayenne.loop();
 }
 
+// _______________Cayenne Callbacks_____________________
+// Button
 CAYENNE_IN(V0){
   heater = getValue.asInt();
   Serial.println(heater);
@@ -63,6 +66,17 @@ CAYENNE_IN(V0){
   digitalWrite(relay1, heater);
   digitalWrite(relay2, heater);
 }
+
+// Live time
+CAYENNE_OUT(1){
+  if(heater) {
+    Cayenne.virtualWrite(V1, millis());
+  }
+  else{
+    Cayenne.virtualWrite(V1, 0);
+  }
+}
+//___________________________________________________
 
 // Function to turn OFF the heater
 void turnOFFheater(){
