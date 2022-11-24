@@ -1,6 +1,7 @@
 
 # Fish Feeder
 
+*This is a lighter version of the original Fish Feeder APP.*
 A project for controlling fish aquarium devices over the Internet.
 This project works with Arduino, NodeMCU and EPS8266 boards.
 
@@ -20,12 +21,8 @@ The standard version of the project could:
 
 Electronics:
 - 1x Arduino (any board)
-- 2x 10kOhm Resistors
-- 1x Button
-- 1x 10kOhm Potentiometer
-- 1x Servo sg90
-- 1x Led
-- 1x 470uF Capacitor
+- 1x DC motor
+- 1x L293D
 - 14x Jumpers (approximately) 
 
 Non Electronics:
@@ -38,9 +35,9 @@ Non Electronics:
 Electronics:
 Follow the circuit on the photo below. Keep in mind that the Capacitor could provide some voltage stability but it is not mandatory. You can power up your system with Batteries or USB adaptor. The power supply required depends on the board you are using. 
 
-![circuit1](https://github.com/bronzeRaf/HomeAutomations/blob/main/FeederProject/FishFeeder/assets/circuit.png)
+![circuit1](https://github.com/bronzeRaf/HomeAutomations/blob/main/FeederLightProject/FishFeederLight/assets/circuit.png)
 
-![circuit2](https://github.com/bronzeRaf/HomeAutomations/blob/main/FeederProject/FishFeeder/assets/5.jpg)
+![circuit2](https://github.com/bronzeRaf/HomeAutomations/blob/main/FeederLightProject/FishFeederLight/assets/5.jpg)
 
  Non Electronics:
 - Open a hole on the top of the first cap so that the servo can fit inside. Then screw or yield the servo for stability.
