@@ -2,6 +2,7 @@
 # Fish Feeder
 
 *This is a lighter version of the original Fish Feeder APP.*
+
 A project for controlling fish aquarium devices over the Internet.
 This project works with Arduino, NodeMCU and EPS8266 boards.
 
@@ -21,7 +22,7 @@ The standard version of the project could:
 
 Electronics:
 - 1x Arduino (any board)
-- 1x DC motor
+- 1x DC motor (eg in the body of a Servo, or not...)
 - 1x L293D
 - 14x Jumpers (approximately) 
 
