@@ -14,9 +14,7 @@ Go anywhere and anytime with your fish in first place.
 
 The standard version of the project could:
 - Feed fish every 8 hours
-- Extra feed out of the routine with a button press (without reset to the timer)
-- Reset timer
-- Adjust the portion via potentiometer
+- Extra feed out of the routine with a button press (with a reset to the timer)
  
 #### Hardware
 
@@ -24,6 +22,7 @@ Electronics:
 - 1x Arduino (any board)
 - 1x DC motor (eg in the body of a Servo, or not...)
 - 1x L293D
+- 1x 6xAA battery case (or 4xAA or any input supply source 4.5-36V)
 - 14x Jumpers (approximately) 
 
 Non Electronics:
@@ -34,7 +33,10 @@ Non Electronics:
 
 #### Instructions
 Electronics:
-Follow the circuit on the photo below. Keep in mind that the Capacitor could provide some voltage stability but it is not mandatory. You can power up your system with Batteries or USB adaptor. The power supply required depends on the board you are using. 
+Follow the circuit on the photo below. Keep in mind that the cirtuit gets 2 power supplies, one to arduino (via USB or via power adaptor) and one into L239D in order to feed the DC motor with the correct current. 
+You can power up L239D with Batteries or power adaptor in between 4.5-36V and the IC will provide the motor with the required current and voltage to make sure the supply will be enough (600mA and peaks up to 1.2A per channel).
+Powering up the motor using Arduino 5V supply is bad practice and won't be enough for a reliable and long term running feeding machine. 
+Puting the GNDs all together in the same connector (Arduino + Batteries/external power) is crucial for the circuit to work properly!
 
 ![circuit1](https://github.com/bronzeRaf/HomeAutomations/blob/main/FeederLightProject/FishFeederLight/assets/circuit.png)
 

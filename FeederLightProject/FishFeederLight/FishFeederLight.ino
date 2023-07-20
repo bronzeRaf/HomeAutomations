@@ -2,9 +2,9 @@
 int enA = 9;
 int in1 = 8;
 int in2 = 7;
-int motor_speed = 190;              // For PWM maximum possible values are 0 to 255
-float repeatInterval = 60000*60*5;  // ms*Min*Hrs
-float enableInterval = 1000*10*1;   // ms*Min*Hrs
+int motor_speed = 100;              // For PWM maximum possible values are 0 to 255
+float repeatInterval = 60000*60*8;  // ms*Min*Hrs
+float enableInterval = 1000*3;   // ms*secs
 
 void setup() {
   // Set the motor control pins to outputs
